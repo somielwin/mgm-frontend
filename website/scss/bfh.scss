@@ -1,0 +1,473 @@
+/* Banking from Home */
+
+#bankingFromHome{
+  .card__body-content{
+    min-height: 80px;
+  }
+  .page__intro a{
+    color: #FFF !important;
+  }
+  .card__icons .card__body-title h3 {
+    font-size: 38px;
+    color: #222;
+  }
+
+  @media (min-width: 1024px) {
+    .page__intro{
+      margin-bottom: 10px;
+      h2,
+      p{
+        text-align: left;
+        padding: 0;
+      }
+      h2{
+        margin: 20px 0;
+      }
+      a{
+        float: left;
+      }
+      img{
+        float: left;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    
+  }
+  @media (max-width: 767px){
+
+  }
+  @media (max-width: 640px) {
+
+  }
+
+  @media (max-width: 480px) {
+    .section__content .container,
+    .button{
+      width: 90% !important;
+    }
+  }
+}
+
+.bfh-service{
+  .banner{
+    &.banner--whole{
+      padding-bottom: 0 !important;
+      height: calc(100vh - 100px) !important;
+    }
+    .banner__content{
+      max-width: unset;
+      margin: 0 auto;
+    }
+    .banner__content h1{
+      text-align: center;
+    }
+    .banner__header{
+      bottom: auto;
+      top: 50%;
+      margin-top: -100px;
+
+      &.focused{
+        margin-top: -180px;
+      }
+    }
+    .dropdown__selection{
+      margin-top: 20px;
+    }
+  }
+  
+  .page__intro{
+    ul{
+      list-style-type: disc;
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+
+  .page__intro--sub h3{
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+  }
+  .dropdown__select{
+    // background: transparent;
+    // padding: 10px 20px !important;
+    // border: 3px solid #FFF;
+    // width: fit-content;
+    background: transparent;
+    padding: 0;
+  }
+  .dropdown__select label{
+    font-size: 24px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border-color: #FFF transparent transparent transparent;
+    margin-left: 15px;
+  }
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    border-color: transparent transparent #FFF transparent;
+  }
+  .dropdown__label{
+    font-weight: 500;
+    font-size: 24px !important;
+    margin-bottom: 0;
+  }
+  .select2-container .select2-selection--single .select2-selection__rendered{
+    background: transparent;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 24px !important;
+    padding-left: 0;
+    padding-right: 20px;
+  }
+  .select2-container--open .select2-dropdown{
+    /* left: calc(80% - 3px); */
+    border: 3px solid white;
+    xtext-align: center;
+    xbackground: transparent;
+    top: 0;
+    border-radius: 0;
+  }
+  .select2-results__option{
+    xtext-transform: capitalize;
+    xborder-bottom: none;
+    xcolor: #FFF !important;
+
+  }
+  .card__icons .card__vertical{
+    padding: 10px 0;
+    min-height: 270px;
+  }
+  .card__body-title h3{
+    color: #333;
+    font-size: 32px;
+    margin: 10px auto;
+  }
+  .card__body-content p{
+    font-size: 14px;
+  }
+
+  .video-holder-wrap,
+  .video-big .item{
+    padding-bottom: 56%;
+  }
+
+  .select2-results__options {
+
+    li {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    // .select2-dropdown{
+    //   visibility: hidden;
+    //   &.visible{
+    //     visibility: visible !important;
+    //   }
+    //   &.select2-dropdown--above{
+    //     display: none !important;
+    //   }
+    // }
+
+    .dropdown__select .select2-container{
+      padding-left: 137px !important;
+      margin-left: -137px !important;
+      padding-right: 38px !important;
+      margin-right: -38px !important;
+      z-index: 1000;
+      border: 3px solid #FFF;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+
+  }
+
+  
+
+  
+  @media (max-width: 1024px) {
+    .select2-container--open .select2-dropdown{
+      background: #fff;
+    }
+    .select2-container{
+      padding-left: 0 !important;
+      margin-left: 0px !important;
+      padding-right: 38px !important;
+      margin-right: -38px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .dropdown__select label{
+      font-size: 24px;
+    }
+
+    .dropdown__select .select2-container{
+      margin-right: 0 !important;  
+      border: 3px solid #fff;
+      padding-left: 15px !important;
+      margin-top: 10px;
+      margin-left: 0 !important;
+    }
+
+
+    .select2-container {
+
+    }
+
+    .select2-container--open .select2-dropdown{
+      left: 0;
+      margin-left: 0 !important;
+    } 
+  }
+
+  @media (max-width: 767px){
+    .banner .banner__header h1 {
+      margin: 0 auto !important;
+    }
+    // .banner .banner__content{
+    //   margin: 0 -40px !important;
+    // }
+    .dropdown__select{
+      width: 100%;
+    }
+
+    .select2-results__option{
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 640px) {
+    .select2-container--default .select2-selection--single .select2-selection__arrow b{
+      margin-left: 60px;
+    }
+    .select2-container--open .select2-dropdown{
+      left: 0px;
+    }
+    // .dropdown__selection{
+    //   margin: 20px -40px 0 -40px !important;
+    // }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      max-width: 250px;
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .dropdown__select .select2-container,
+    .dropdown__select label{
+      display: inline-block;
+      max-width: unset;
+      //padding: 0 !important;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered,
+    .dropdown__label{
+      font-size: 18px !important
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b{
+      margin-left: 20px;
+    }
+    .select2-container--open .select2-dropdown{
+      left: 0px;
+    }
+
+
+  }
+
+}
+
+#bfhOnlineBanking .page__intro h2,
+#bfhPayLoans .page__intro h2{
+  color: #008ad3;
+}
+
+#bfhPayBills .page__intro h2,
+#bfhDepositChecks .page__intro h2{
+  color: #d67098;
+}
+
+#bfhReceiveCash .page__intro h2,
+#bfhCardlessWithdrawal .page__intro h2{
+  color: #00a03f;
+}
+
+#bfhSendCash .page__intro h2{
+  color: #ac5cb6;
+}
+
+#messageFromCeo{
+  .page__intro{
+    text-align: left;
+  }
+  .message__img{
+    margin-bottom: 30px;
+    img{
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .message__quote{
+    blockquote{
+      padding: 30px;
+      quotes: "“" "”" "‘" "’";
+
+      &::before{
+        content: open-quote;
+        color: #4091e4;
+        font-size: 100px;
+        display: block;
+        margin-bottom: -70px;
+        font-style: italic;
+        margin-left: -15px;
+        margin-top: -25px;
+      }
+      
+    }
+    p{
+      text-align: left;
+      margin-bottom: 10px;
+      color: #444;
+      font-style: italic;
+      font-size: 20px;
+    }
+    span{
+      display: block;
+      font-style: italic;
+      color: #444;
+
+      &.author{
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+  .message__content{
+    h5, h6{
+      font-weight: bold;
+    }
+    h5{
+      margin-bottom: 15px;
+    }
+    h6{
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    p{
+      text-align: left;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-style: italic;
+      color: #222;
+    }
+  }
+}
+
+#serviceAnnouncements{
+  .page__intro h2{
+    color: #3783d9;
+  }
+  .card__list{
+    background: rgba(213, 236, 247, 0.4);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .tab{
+    li{
+      margin-right: 0;
+    }
+    a{
+      border: none;
+      padding: 10px 15px;
+      display: block;
+      color: #666;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .active{
+      background: #FFF;
+
+      a{
+        color: #444;
+        font-weight: 600;
+      }
+    }
+  }
+  .tab__content{
+    &, .accordion-container{
+      padding: 0 !important;
+    }
+    .accordion{
+      padding: 15px 30px 15px 20px;
+      background: rgba(213, 236, 247, 0.4);
+      color: #333 !important;
+
+      &.is-expanded{
+        background: #FFF;
+      }
+    }
+    .accordion.is-expanded + .accordion__content{
+      background: #FFF;
+    }
+    .accordion__content{
+      padding: 30px;
+      margin-top: 5px;
+
+      h4{
+        font-family: "Big Noodle Titling","Helvetica","sans-serif";
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        line-height: 0.9;
+        color: #3783d9;
+        font-size: 28px;
+      }
+      h5{
+        color: #3783d9;
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+      p{
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .button{
+        text-transform: capitalize;
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+    .accordion.has-caret:before{
+      right: 20px;
+    }
+  }
+  .sa-item{
+    &:not(:last-child){
+      border-bottom: 1px solid #b2cfe4;
+    }
+    &:hover .accordion:not(.is-expanded){
+      background: rgba(213, 236, 247, 1);
+    }
+  }
+}
+
+.download-app{
+  padding-bottom: 100px;
+  img{
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,12 @@
+[ 
+  {"name": "start saving money", "code": "AF"}, 
+  {"name": "save money", "code": "AL"}, 
+  {"name": "apply for a credit card", "code": "DZ"}, 
+  {"name": "apply for a loan", "code": "AS"}, 
+  {"name": "request for a loan", "code": "AD"}, 
+  {"name": "view all card types", "code": "AO"}, 
+  {"name": "borrow money for school", "code": "AI"}, 
+  {"name": "borrow money for business", "code": "AG"}, 
+  {"name": "start investing", "code": "AR"}, 
+  {"name": "start an investment", "code": "AM"}
+]

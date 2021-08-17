@@ -1,0 +1,103 @@
+/** ----------------------
+		Master .scss file
+
+  > Comment out necessary scss file
+  > Leave base scss files as they were
+  > Rename to yourpage.scss and attach to your markup
+ ----------------------**/
+
+/* ===== BASE ====== */
+
+@import 'base/fonts', 
+				'base/reset',
+				'base/normalize',
+				'base/mixins',
+				'base/variables'; 
+
+/* ===== LAYOUT ===== */
+
+@import 'layout/grid'; // CSS Grid
+@import 'layout/bootstrap'; // Bootstrap Grid system
+//@import 'layout/oocss'; // Object Oriented CSS
+@import 'layout/flex';
+
+/* ===== THEME ===== */
+
+@import 'theme/colors',
+				'theme/spacing',
+				'theme/typography';
+
+/* ===== COMPONENTS ===== */
+
+/* Form elements */
+@import 'component/forms'; 
+@import 'component/button'; 
+//@import 'component/slider'; 
+//@import 'component/switcher'; 
+
+/* Data representation */
+@import 'component/lists'; 
+@import 'component/tables'; 
+@import 'component/card'; 
+//@import 'component/tooltip'; 
+//@import 'component/modals'; 
+
+/* Visual grouping */
+@import 'component/tabs'; 
+@import 'component/accordion'; 
+
+/* System status visibility */
+//@import 'component/alerts'; 
+//@import 'component/popovers';  
+@import 'component/tooltip'; 
+//@import 'component/progress'; 
+//@import 'component/badge'; 
+//@import 'component/spinners'; 
+
+/* ===== MODULES ===== */
+
+/* Gallery */
+//@import 'module/image-gallery'; 
+//@import 'module/video-gallery'; 
+//@import 'module/gallery'; /* mixed media */
+
+/* Slider */
+//@import 'module/image-slider'; 
+//@import 'module/video-slider'; 
+//@import 'module/slider'; /* mixed media */
+
+/* Datatables */
+//@import 'module/datatables'; 
+
+/* User Profile */
+
+/* ===== SECTIONS ===== */
+
+@import 'section/menu'; 
+@import 'section/header';  
+//@import 'section/sidebar';  
+@import 'section/main';  
+@import 'section/footer'; 
+
+/* ===== STATE ===== */
+
+@import 'misc/animate'; 
+@import 'misc/preload'; 
+
+
+/* ===== PLUGINS ===== */
+
+@import 'plugin/autocomplete';
+@import 'plugin/swiper'; 
+@import 'plugin/select2'; 
+@import 'plugin/font-awesome';
+@import 'plugin/overrides'; 
+
+@import 'theme/hexagon'; 
+@import 'section/branchfinder'; 
+
+
+/* ===== PAGE-SPECIFIC ===== */
+
+/* @import 'page/custom'; */
+

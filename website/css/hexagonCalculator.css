@@ -1,0 +1,328 @@
+/* BREAKPOINTS */
+/* --------
+ Usage:
+.my-box {
+  padding: 10px;
+  
+  @include for-desktop-1024 {
+    padding: 20px;
+  }
+}
+*/
+/* VENDOR PREFIXES */
+/* CSS3 Transition */
+/* -------- Usage: .class-name { @include transition(all 0.5s ease); }  --------- */
+/* CSS3 Transition Delay */
+/* -------- Usage: .class-name { @include transition-delay(all 0.5s ease); } --------- */
+/* CSS3 Transform */
+/* -------- Usage: .class-name { @include transform(all 0.5s ease); } --------- */
+/* CSS3 Transform Style */
+/* -------- Usage: .class-name { @include transform-style(preserve-3d); }  --------- */
+/* CSS3 Animation */
+/* -------- Usage: @include keyframes(animationName) { 0% { opacity: 1; } 90% { opacity: 0; } } class-name { @include animation('animationName 5s 3'); }  --------- */
+/* -------- Usage: .class-name { @include animation-fill-mode(forwards); }  --------- */
+/* For loading placeholder */
+/* GLOBAL VARIABLES */
+/* Fonts */
+/* Colors */
+/* System Colors */
+/* Default Measurements */
+/* Border */
+/* Breakpoints */
+/*! nouislider - 14.6.3 - 11/19/2020 */
+/* Functional styling; These styles are required for noUiSlider to function. You don't need to change these rules to apply your design. */
+.noUi-target, .noUi-target * { -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-user-select: none; -ms-touch-action: none; touch-action: none; -ms-user-select: none; -moz-user-select: none; user-select: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.noUi-target { position: relative; }
+
+.noUi-base, .noUi-connects { width: 100%; height: 100%; position: relative; z-index: 1; }
+
+/* Wrapper for all connect elements. */
+.noUi-connects { overflow: hidden; z-index: 0; }
+
+.noUi-connect, .noUi-origin { will-change: transform; position: absolute; z-index: 1; top: 0; right: 0; -ms-transform-origin: 0 0; -webkit-transform-origin: 0 0; -webkit-transform-style: preserve-3d; transform-origin: 0 0; -webkit-transform-style: flat; transform-style: flat; }
+
+.noUi-connect { height: 100%; width: 100%; }
+
+.noUi-origin { height: 10%; width: 10%; }
+
+/* Offset direction */
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin { left: 0; right: auto; }
+
+/* Give origins 0 height/width so they don't interfere with clicking the connect elements. */
+.noUi-vertical .noUi-origin { width: 0; }
+
+.noUi-horizontal .noUi-origin { height: 0; }
+
+.noUi-handle { -webkit-backface-visibility: hidden; backface-visibility: hidden; position: absolute; }
+
+.noUi-touch-area { height: 100%; width: 100%; }
+
+.noUi-state-tap .noUi-connect, .noUi-state-tap .noUi-origin { -webkit-transition: transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; -o-transition: transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
+
+.noUi-state-drag * { cursor: inherit !important; }
+
+/* Slider size and handle placement; */
+.noUi-horizontal { height: 18px; }
+
+.noUi-horizontal .noUi-handle { width: 34px; height: 28px; right: -17px; top: -6px; }
+
+.noUi-vertical { width: 18px; }
+
+.noUi-vertical .noUi-handle { width: 28px; height: 34px; right: -6px; top: -17px; }
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle { left: -17px; right: auto; }
+
+/* Styling; Giving the connect element a border radius causes issues with using transform: scale */
+.noUi-target { background: #FAFAFA; border-radius: 4px; border: 1px solid #D3D3D3; -webkit-box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB; box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB; }
+
+.noUi-connects { border-radius: 3px; }
+
+.noUi-connect { background: #3FB8AF; }
+
+/* Handles and cursors; */
+.noUi-draggable { cursor: ew-resize; }
+
+.noUi-vertical .noUi-draggable { cursor: ns-resize; }
+
+.noUi-handle { border: 1px solid #D9D9D9; border-radius: 3px; background: #FFF; cursor: default; -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB; box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB; }
+
+.noUi-active { -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB; box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB; }
+
+/* Handle stripes; */
+.noUi-handle:before, .noUi-handle:after { content: ""; display: block; position: absolute; height: 14px; width: 1px; background: #E8E7E6; left: 14px; top: 6px; }
+
+.noUi-handle:after { left: 17px; }
+
+.noUi-vertical .noUi-handle:before, .noUi-vertical .noUi-handle:after { width: 14px; height: 1px; left: 6px; top: 14px; }
+
+.noUi-vertical .noUi-handle:after { top: 17px; }
+
+/* Disabled state; */
+[disabled] .noUi-connect { background: #B8B8B8; }
+
+[disabled].noUi-target, [disabled].noUi-handle, [disabled] .noUi-handle { cursor: not-allowed; }
+
+/* Base; */
+.noUi-pips, .noUi-pips * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.noUi-pips { position: absolute; color: #999; }
+
+/* Values; */
+.noUi-value { position: absolute; white-space: nowrap; text-align: center; }
+
+.noUi-value-sub { color: #ccc; font-size: 10px; }
+
+/* Markings; */
+.noUi-marker { position: absolute; background: #CCC; }
+
+.noUi-marker-sub { background: #AAA; }
+
+.noUi-marker-large { background: #AAA; }
+
+/* Horizontal layout; */
+.noUi-pips-horizontal { padding: 10px 0; height: 80px; top: 100%; left: 0; width: 100%; }
+
+.noUi-value-horizontal { -webkit-transform: translate(-50%, 50%); -ms-transform: translate(-50%, 50%); transform: translate(-50%, 50%); }
+
+.noUi-rtl .noUi-value-horizontal { -webkit-transform: translate(50%, 50%); -ms-transform: translate(50%, 50%); transform: translate(50%, 50%); }
+
+.noUi-marker-horizontal.noUi-marker { margin-left: -1px; width: 2px; height: 5px; }
+
+.noUi-marker-horizontal.noUi-marker-sub { height: 10px; }
+
+.noUi-marker-horizontal.noUi-marker-large { height: 15px; }
+
+/* Vertical layout; */
+.noUi-pips-vertical { padding: 0 10px; height: 100%; top: 0; left: 100%; }
+
+.noUi-value-vertical { -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); padding-left: 25px; }
+
+.noUi-rtl .noUi-value-vertical { -webkit-transform: translate(0, 50%); -ms-transform: translate(0, 50%); transform: translate(0, 50%); }
+
+.noUi-marker-vertical.noUi-marker { width: 5px; height: 2px; margin-top: -1px; }
+
+.noUi-marker-vertical.noUi-marker-sub { width: 10px; }
+
+.noUi-marker-vertical.noUi-marker-large { width: 15px; }
+
+.noUi-tooltip { display: block; position: absolute; border: 1px solid #D9D9D9; border-radius: 3px; background: #fff; color: #000; padding: 5px; text-align: center; white-space: nowrap; }
+
+.noUi-horizontal .noUi-tooltip { -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); left: 50%; bottom: 120%; }
+
+.noUi-vertical .noUi-tooltip { -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); top: 50%; right: 120%; }
+
+.noUi-horizontal .noUi-origin > .noUi-tooltip { -webkit-transform: translate(50%, 0); -ms-transform: translate(50%, 0); transform: translate(50%, 0); left: auto; bottom: 10px; }
+
+.noUi-vertical .noUi-origin > .noUi-tooltip { -webkit-transform: translate(0, -18px); -ms-transform: translate(0, -18px); transform: translate(0, -18px); top: auto; right: 28px; }
+
+/*** CSS ***/
+.hexagon-calculator-wrap { background: #f0f4f7; margin: 20px 0 0; }
+
+.hexagon-calculator-wrap input[type="text"], .hexagon-calculator-wrap input[type="number"], .hexagon-calculator-wrap input[type="tel"] { border: none; padding-left: 7px; padding-right: 7px; }
+
+.hexagon-calculator-wrap .flex { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; list-style-type: none; }
+
+.hexagon-calculator-wrap .slider__wrapper { margin-bottom: 0; }
+
+.hexagon-calculator-wrap .slider__wrapper .range-bar { background: #5e5b56; border-radius: 4px; height: 3px; margin-top: 15px; border: none; margin-bottom: 15px; position: relative; z-index: 99; }
+
+.hexagon-calculator-wrap .slider__value { color: #000; }
+
+.hexagon-calculator-wrap .range-handle { background: #5e5b56; }
+
+.hexagon-calculator-wrap .range-quantity { background-color: #a47502; }
+
+.hexagon-left { width: 25%; background: #ecebe6; }
+
+.hexagon-left .hexagon-peso-deposit { background: #e7e5d9; text-align: center; padding: 30px 30px; }
+
+.hexagon-left .hexagon-peso-deposit h5 { margin-top: 0; margin-bottom: 10px; color: #000; font-weight: 500; }
+
+.hexagon-left .hexagon-life-coverage { padding: 30px 30px; }
+
+.hexagon-left .hexagon-life-coverage h5 { margin-top: 0; color: #000; font-weight: 500; }
+
+.slider__wrapper .hex-field-value-wrap { margin-top: 20px; }
+
+.hex-value-php h2 { font-size: 50px; color: #c2ab79; margin-bottom: 0; margin-top: 0; }
+
+.hex-value-php h2 small { display: inline-block; font-size: 18px; vertical-align: top; font-weight: 700; color: #000; }
+
+.hex-value-php span { font-size: 14px; line-height: 16px; position: relative; top: 0px; color: #c2ab79; font-weight: bold; text-align: center; display: block; margin-top: 8px; }
+
+.hex-value-php span small { font-size: 12px; }
+
+.hex-value-php.floating-label h2 { position: relative; padding: 0px 30x; }
+
+.hex-value-php.floating-label h2 small { position: absolute; margin-left: 15px; }
+
+.hex-value-php.black h2 { color: #000; }
+
+.hex-value-php.black span { color: #000; }
+
+.hexagon-calculator-tabs-wrap { width: 75%; border-left: 2px solid #c0ae7c; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs-border { border-bottom: 2px solid #c0ae7c; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs:after { content: ''; display: block; float: none; clear: both; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li { width: 16.66%; float: left; text-align: center; padding: 20px 0; border-top: 2px solid transparent; border-left: 2px solid transparent; border-right: 2px solid transparent; position: relative; opacity: 0.4; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li:first-child { border-left: 0 !important; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li:first-child.active:before { left: 0; width: 100%; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li:before { content: ''; display: block; height: 4px; position: absolute; bottom: -4px; width: calc(100%); background: #f0f4f7; left: 0px; visibility: hidden; opacity: 0; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li.active { border-left: 2px solid #c0ae7c; border-right: 2px solid #c0ae7c; border-top: 2px solid #c0ae7c; opacity: 1; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li.active:before { visibility: visible; opacity: 1; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li span { font-weight: bold; color: #1B1C1D; display: block; padding: 5px 20px; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li figure { width: 60px; height: 60px; margin: 0 auto 10px; position: relative; border-radius: 50%; }
+
+.hexagon-calculator-tabs-wrap .hex-cal-tabs li figure img { width: 100%; height: auto; }
+
+.hex-cal-tabs-options { padding: 30px; }
+
+.hex-cal-tabs-options .hex-cal-tabs-item { border: 2px solid #c0ae7c; background: #fff; border-radius: 6px; padding: 15px; display: none; }
+
+.hex-cal-tabs-options .hex-cal-tabs-item.active { display: block; }
+
+.hex-cal-tabs-options .hex-cal-tabs-item input[type="text"], .hex-cal-tabs-options .hex-cal-tabs-item input[type="number"], .hex-cal-tabs-options .hex-cal-tabs-item input[type="tel"] { border: none; background: #ede6d6; }
+
+.hex-cal-tabs-options .hex-cal-tabs-item:after { content: ''; display: block; float: none; clear: both; }
+
+.hex-field-value-wrap { position: relative; padding-left: 60px !important; }
+
+.hex-field-value-wrap.large-space { padding-left: 160px !important; }
+
+.hex-field-value-wrap.medium-space { padding-left: 110px !important; }
+
+.hex-field-value-wrap > label.label-php { position: absolute; left: 0; top: 50%; font-size: 16px; text-transform: uppercase; margin-top: -14px; font-weight: bold; }
+
+.slider__wrapper .slider__value.whole-number { width: 100%; text-align: left; }
+
+.hex-cal-rate { background: #f8f7f2; padding: 20px; border-radius: 4px; width: 100%; margin-bottom: 25px; }
+
+.hex-cal-rate.fr { max-width: 250px; margin-bottom: 0; -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+
+.hex-cal-rate .flex-wrapper:after { content: ''; display: block; float: none; clear: both; }
+
+.hex-cal-rate .flex-wrapper ul { float: right; width: 60%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -ms-flex-line-pack: justify; align-content: space-between; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.hex-cal-rate .flex-wrapper ul li { padding-top: 0; width: 100%; }
+
+.hex-cal-rate .flex-wrapper ul.flex-column-list { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.hex-cal-rate .flex-wrapper ul.flex-column-list li { width: 100%; padding-top: 20px; }
+
+.hex-cal-rate .flex-wrapper ul.flex-column-list li:first-child { padding-top: 0; }
+
+.hex-cal-rate .flex-wrapper h3 { width: 40%; float: left; margin: 0; }
+
+.hex-cal-rate ul li { padding-top: 30px; }
+
+.hex-cal-rate ul li:first-child { padding-top: 0; }
+
+.hex-cal-rate .hex-value-php h2 { font-size: 40px; }
+
+.hex-cal-content { padding: 0px 15px 0px 0px; }
+
+.hex-cal-content .form__result-label { color: #bcaf7a; }
+
+.hex-cal-content h3 { margin-top: 0; }
+
+.hex-cal-content.fl { width: calc(100% - 250px); float: left; -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+
+.hex-cal-content .form__group select { border: none; background: #ede6d6; }
+
+.hex-cal-content .hex-field-value-wrap { margin-bottom: 0; min-height: 50px; }
+
+.terms-options-tabs { display: none; }
+
+.terms-options-tabs.active { display: block; }
+
+.noUiSlider.noUi-target { background: transparent; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; border: none; height: 49px; padding-top: 19px; }
+
+.noUiSlider .noUi-connects { background: #5f5c55; height: 3px; -webkit-box-shadow: none; box-shadow: none; border: none; }
+
+.noUiSlider .noUi-handle { width: 20px; border-radius: 50%; top: -9px; border: none; -webkit-box-shadow: none; box-shadow: none; height: 20px; background: #5f5c55; }
+
+.noUiSlider .noUi-handle:before, .noUiSlider .noUi-handle:after { display: none; }
+
+.mico-intro.page__intro { text-align: left; margin-bottom: 0 !important; padding-top: 60px !important; }
+
+.mico-intro.page__intro h2, .mico-intro.page__intro p { text-align: left; padding-left: 0; padding-right: 0; margin-left: 0; margin-right: 0; }
+
+.mico-intro.page__intro h2 { margin-bottom: 25px; }
+
+.mico-intro.page__intro p { margin-bottom: 15px; }
+
+.mico-intro.page__intro.page__intro p { max-width: 100%; }
+
+.mico-carditem .card__body-icon { width: 90px; height: 90px; margin-bottom: 15px; }
+
+.mico-carditem .card__body-icon img { width: 100%; height: auto; }
+
+.mico-carditem .card__icons { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 30px; }
+
+.mico-carditem .card__icons li { margin-bottom: 20px; padding-left: 20px; padding-right: 20px; }
+
+.bayanihan-form .form__group span.message { font-size: 10px; font-weight: 300; font-style: italic; display: block; position: absolute; text-align: left; right: 15px; z-index: 101; bottom: 12px; margin-bottom: 0; bottom: 2px; opacity: 1; }
+
+@media (max-width: 991px) { .bayanihan-form .flex--whole li { padding: 8px; } }
+
+.bayanihan-form .form__group label { padding-bottom: 5px; }
+
+.bayanihan-form .calendar-icon { position: absolute; bottom: 6px; right: 10px; z-index: 3; padding-bottom: 5px; }
+
+.mico_product__features { -webkit-box-shadow: none; box-shadow: none; background: transparent; }
+
+.mico_product__features .card__body { background: transparent; padding-left: 0; padding-left: 0; }
+
+.mico_product__features .card__body-title p { color: #6d4a0c; font-size: 22px; font-weight: 500; }
+
+.bayanihan-form .g-recaptcha { max-width: 304px; margin-left: auto; margin-right: auto; }

@@ -1,0 +1,290 @@
+.clearfix:after,
+.container-fluid:after,
+.container:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.row:after {
+    float: none;
+    clear: both;
+}
+
+.bayanihan-form .text--negative {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bayanihan-form .form__group label {
+    padding-bottom: 5px;
+}
+
+.bayanihan-form.byn-calculator-box .form__group {
+    margin-bottom: 15px;
+}
+
+.bayanihan-form .byn-calculator a .fa-calculator {
+
+    position: absolute;
+    top: 23px;
+    left: 25px;
+    font-size: 24px;
+}
+
+.bayanihan-form .calendar-icon {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    z-index: 3;
+}
+
+.bayanihan-form .byn-calculator a {
+    background: #3783d9;
+    color: #fff;
+    display: block;
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 20px;
+    padding-left: 60px;
+    position: relative;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+
+.bayanihan-form .byn-calculator-box h4 {
+    font-size: 22px;
+    margin-bottom: 40px !important;
+    padding-right: 40px;
+    padding-left: 50px;
+    position: relative;
+    text-align: left;
+}
+
+.bayanihan-form .byn-calculator-box h4 i {
+    position: absolute;
+    left: 0;
+    color: #3783d9;
+    top: 50%;
+    margin-top: -17px;
+    font-size: 34px;
+}
+
+
+.bayanihan-form .byn-calculator-box {
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+.bayanihan-form .byn-calculator-box .form__group>div {
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.bayanihan-form .byn-calculator-box .blue {
+    color: #3783d9;
+    font-weight: bold;
+}
+
+.bayanihan-form .byn-calculator-box {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bayanihan-form .form__result {
+    padding-top: 8px;
+}
+
+.bayanihan-form .g-recaptcha {
+    max-width: 304px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bayanihan-form .clr {
+    display: block;
+    float: none;
+    clear: both;
+}
+
+.bayanihan-form .byn-calculator-box .form__group {
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 767px) {
+
+
+    .bayanihan-form .byn-calculator-box h4 {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .bayanihan-form .byn-calculator-box .form__group {
+        display: block;
+    }
+
+    .bayanihan-form .byn-calculator-box .form__group [class*='col-'] {
+        display: block;
+        width: 100%;
+    }
+
+    .bayanihan-form .byn-calculator-box {
+        padding: 15px;
+    }
+}
+
+#otpContent .advisory-content .button {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+}
+
+#otpContent .flex--half {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#otpContent .flex--half ul {
+    display: block;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+#otpContent .flex--half ul:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+#otpContent .flex--half ul li {
+    width: 50%;
+    float: left;
+
+}
+
+
+.advisory-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: auto
+}
+
+.advisory-wrap.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 123456;
+    pointer-events: auto
+}
+
+.advisory-wrap .jq-close:before {
+    content: '';
+    width: 25px;
+    height: 2px;
+    display: block;
+    border-radius: 2px;
+    background: #212121;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.advisory-wrap .jq-close:after {
+    content: '';
+    width: 2px;
+    height: 25px;
+    display: block;
+    border-radius: 2px;
+    background: #212121;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
+    top: -9px;
+    left: -1px;
+    position: relative;
+}
+
+.advisory-wrap .jq-close {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 7px;
+}
+
+.advisory-content .button {
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.advisory-content h4 {
+    margin-top: 0;
+    line-height: 32px;
+    margin-bottom: 25px;
+}
+
+.advisory-content {
+    max-width: 420px;
+    background: #fff;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content-text {
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+@media (max-width: 767px) {
+    .advisory-content {
+        max-width: 90%;
+    }
+
+    .advisory-wrap h4 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}

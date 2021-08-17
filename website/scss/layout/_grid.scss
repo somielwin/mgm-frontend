@@ -1,0 +1,294 @@
+@import '../theme/spacing';
+
+/* CSS GRID */
+
+%grid{
+  display: -ms-grid;
+  display: grid;
+  // margin: $baseSpace;
+  // padding: $baseSpace;
+  & > li{
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $halfSpace;
+  }
+}
+
+.grid{
+  @extend %grid;
+}
+
+// For demo purposes only
+
+.bg-sidebar{
+  background-color: #ffcc5c;
+}
+
+.bg-body{
+  background-color: #afe5ad;
+}
+
+/* 
+ * Body Sidebar
+ * - add to <body>
+ */
+.grid--left-sidebar,
+.grid--right-sidebar {
+  @extend %grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.grid--right-sidebar {
+  aside {
+    -ms-grid-row: 1;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .grid--left-sidebar {
+    -ms-grid-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid--right-sidebar {
+    -ms-grid-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
+
+    aside {
+      -ms-grid-row: 1;
+      grid-row: 1;
+      -ms-grid-column: 2;
+      grid-column: 2;
+    }
+  }
+  .grid--no-sidebar {
+    aside { display: none; }
+  }
+}
+
+/* =====================================
+ * COLUMNS
+ * Max of 12 grid columns
+ ======================================*/
+
+@for $i from 2 through 12 {
+  /* -----------GRID COLUMN----------- 
+   * Outputs class .grid--col-NUM
+   * where NUM is the number of columns
+   * Add to <ul> or <div> container 
+   -----------------------------------*/
+  .grid--col-#{$i} {
+    @extend %grid;
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+  }
+
+  /* --------GRID COLUMN SPAN--------- 
+   * Outputs class .grid--colspan-NUM
+   * where NUM is the number the column spans
+   * Add to <li> or <div> column 
+   -----------------------------------*/
+  .grid--colspan-#{$i}{
+    -ms-grid-column-span: #{$i};
+    grid-column: span #{$i};
+  }
+}
+
+
+// IE does not support repeat();
+@media (min-width: 769px) {
+  _:-ms-fullscreen,
+  :root .grid--col-2{
+    -ms-grid-columns: 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-3{
+    -ms-grid-columns: 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-4{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-5{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-6{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-7{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-8{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-9{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-10{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-11{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--col-12{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+/* =====================================
+ * ROWS
+ * Set the maximum number of rows 
+ * by replacing 10 on the for loop below
+ ======================================*/
+
+@for $i from 2 through 10 {
+  /* -------------GRID ROWS------------ 
+   * Outputs class .grid--row-NUM
+   * where NUM is the number of rows
+   * Add to <ul> or <div> container 
+   -----------------------------------*/
+  .grid--row-#{$i} {
+    @extend %grid;
+    @media (min-width: 769px) {
+      -ms-grid-rows: repeat(#{$i}, 1fr);
+      grid-template-rows: repeat(#{$i}, 1fr);
+    }
+  }
+
+  /* ----------GRID ROW SPAN----------- 
+   * Outputs class .grid--rowspan-NUM
+   * where NUM is the number the column spans
+   * Add to <li> or <div> column 
+   -----------------------------------*/
+  .grid--rowspan-#{$i}{
+    -ms-grid-row-span: #{$i};
+    grid-row: span #{$i};
+  }
+}
+
+// IE does not support repeat();
+@media (min-width: 769px) {
+  _:-ms-fullscreen,
+  :root .grid--row-2{
+    -ms-grid-rows: 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-3{
+    -ms-grid-rows: 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-4{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-5{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-6{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-7{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-8{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-9{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-10{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-11{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  _:-ms-fullscreen, 
+  :root .grid--row-12{
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* 
+ * Grid spacing
+ * - add to <ul>
+ */
+.grid--fluid{
+  margin-left: -$wholeSpace;
+  margin-right: -$wholeSpace;
+}
+.grid--gap-sm{
+  grid-gap: $halfSpace;
+}
+.grid--gap-md{
+  grid-gap: $wholeSpace;
+}
+.grid--gap-lg{
+  grid-gap: $wholeSpace * 2;
+}
+
+.grid--col-gap-sm{
+  grid-column-gap: $halfSpace;
+}
+.grid--col-gap-md{
+  grid-column-gap: $wholeSpace;
+}
+.grid--col-gap-lg{
+  grid-column-gap: $wholeSpace * 2;
+}
+
+.grid--row-gap-sm{
+  grid-row-gap: $halfSpace;
+}
+.grid--row-gap-md{
+  grid-row-gap: $wholeSpace;
+}
+.grid--row-gap-lg{
+  grid-row-gap: $wholeSpace * 2;
+}
+
+// Custom
+
+.grid--space-between{
+  justify-content: space-between;
+  -ms-grid-columns: 230px 230px 230px;
+  grid-template-columns: 230px 230px 230px;
+}
+
+/* =====================================
+ * COLUMN COUNT
+ ======================================*/
+
+@for $i from 2 through 4 {
+  .col-count--#{$i} {
+    @media (min-width: 769px) {
+      width: 100%;
+      display: inline-block;
+      column-count: #{$i};
+      li{
+        -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+      }
+    }
+  }
+}
+

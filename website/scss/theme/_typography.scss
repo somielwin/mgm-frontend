@@ -1,0 +1,289 @@
+@import '../base/variables';
+
+/* TYPOGRAPHY */
+
+a, p, small, span, td, th, *{
+	font-family: $regularFont;
+  font-weight: normal;
+}
+
+/* Headers */
+
+h1 { 
+	margin-block-start: 0.17em; 
+	margin-block-end: 0.17em; 
+	font-size: 90px; 
+	line-height: .8;
+	letter-spacing: -2px;
+}
+h2 { 
+	margin-block-start: 0.33em; 
+	margin-block-end: 0.33em; 
+	font-size: 60px;
+	line-height: .8;
+}
+h3 { 
+	margin-block-start: 0.50em; 
+	margin-block-end: 0.50em; 
+	font-size: 40px;
+	font-weight: 400;
+	line-height: .9;
+}
+h4 { 
+	margin-block-start: 0.23em; 
+	margin-block-end: 0.23em; 
+	font-size: 20px; 
+	font-weight: 400;
+}
+h5 { 
+	margin-block-start: 1.17em; 
+	margin-block-end: 1.17em; 
+	font-size: 20px; 
+	font-weight: 400;
+}
+h6 { 
+	margin-block-start: 1.83em; 
+	margin-block-end: 1.83em; 
+	font-size: 18px; 
+}
+
+h1, h2, h3{
+	font-family: $headerFont;
+}
+
+h4, h5, h6{
+	font-family: $regularFont;
+}
+
+h2, h4{
+	text-align: center;
+}
+
+p {
+	font-size: 16px;
+	//max-width: 635px;
+	font-weight: normal;
+	color: #333;
+}
+
+small{
+	font-size: 0.67em;
+	font-weight: normal;
+}
+
+ul{
+	display: inline;
+}
+
+a{
+	&:hover, &:focus{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee
+}
+
+strong{
+  font-weight: 600;
+}
+
+/* Links */
+
+%link{
+  text-decoration: underline;
+  &:hover {
+  	color: $brandBlue;
+  	text-decoration: underline;
+  }
+}
+
+.link--lg{
+	@extend %link;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.link--info{
+  color: $infoColor;
+}
+
+/* Helper Classes  */
+
+.text--bold{ font-weight: bold !important; }
+
+.text--left{ text-align: left !important; }
+
+.text--center{ text-align: center !important; }
+
+.text--right{ text-align: right !important; }
+
+.text--justify{ text-align: justify !important; }
+
+.text--lowercase{ text-transform: lowercase !important; }
+
+.text--uppercase{ text-transform: uppercase !important; }
+
+.text--caps{ text-transform: capitalize !important; }
+
+.text--lower{
+  font-family: inherit;
+  font-size: 0.75em;
+}
+
+.text--positive,
+.text--negative{ 
+	font-weight: 500;
+	line-height: 1.82;
+	font-size: 22px;
+}
+.text--positive{ color: #31955a; }
+
+.text--negative{ color: red; }
+
+.header--small{
+  font-family: inherit;
+  font-size: 0.8em;
+}
+
+/* Arrows */
+
+.chevron::before {
+	border-style: solid;
+	border-width: 4px 4px 0 0;
+	content: '';
+	display: inline-block;
+	left: 0;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+  height: 17px;
+  width: 15px;
+  color: #fff;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(120deg) skewY(30deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent
+}
+
+/* Icons */
+
+.icon{
+  width: 20px;
+  height: 20px;
+  display: block;
+  // margin: -5px auto;
+	label{
+		font-size: 10px;
+		position: absolute;
+    bottom: 28px;
+    right: 14px;
+    font-weight: bold;
+	}
+}
+
+.icon-search{
+  &:before{
+    content: url('../images/page_template/icon-search.png');
+  }
+}
+
+.icon-login{
+  &:before{
+    content: '';
+    display: inline-block;
+    background-image: url('../images/page_template/icon-login-white.png');
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+  }
+}
+
+.text-content{
+  p{
+    line-height: 2;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text--default{
+  ul, ol{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+  }
+  ol{
+    list-style-type: decimal;
+  }
+  ul{
+    list-style-type: disc;
+  }
+  ul ul {
+    list-style-type: circle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px){
+	h4 {
+		font-size: 30px;
+	}	
+	.chevron::before {
+	  height: 25px;
+	  width: 22px;
+	}
+  .icon{
+    margin: -5px auto;
+  }
+}
+
+@media (max-width: 480px){
+  margin-top: -10px;
+}
+
+
+

@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/* Banking from Home */
+#bankingFromHome .card__body-content {
+  min-height: 80px; }
+
+#bankingFromHome .page__intro a {
+  color: #FFF !important; }
+
+#bankingFromHome .card__icons .card__body-title h3 {
+  font-size: 38px;
+  color: #222; }
+
+@media (min-width: 1024px) {
+  #bankingFromHome .page__intro {
+    margin-bottom: 10px; }
+    #bankingFromHome .page__intro h2,
+    #bankingFromHome .page__intro p {
+      text-align: left;
+      padding: 0; }
+    #bankingFromHome .page__intro h2 {
+      margin: 20px 0; }
+    #bankingFromHome .page__intro a {
+      float: left; }
+    #bankingFromHome .page__intro img {
+      float: left;
+      width: 100%;
+      max-width: 100%; } }
+
+@media (max-width: 480px) {
+  #bankingFromHome .section__content .container,
+  #bankingFromHome .button {
+    width: 90% !important; } }
+
+.bfh-service .banner.banner--whole {
+  padding-bottom: 0 !important;
+  height: calc(100vh - 100px) !important; }
+
+.bfh-service .banner .banner__content {
+  max-width: unset;
+  margin: 0 auto; }
+
+.bfh-service .banner .banner__content h1 {
+  text-align: center; }
+
+.bfh-service .banner .banner__header {
+  bottom: auto;
+  top: 50%;
+  margin-top: -100px; }
+  .bfh-service .banner .banner__header.focused {
+    margin-top: -180px; }
+
+.bfh-service .banner .dropdown__selection {
+  margin-top: 20px; }
+
+.bfh-service .page__intro ul {
+  list-style-type: disc; }
+  .bfh-service .page__intro ul p {
+    font-size: 18px; }
+
+.bfh-service .page__intro--sub h3 {
+  margin: 0 auto 20px auto;
+  text-align: center;
+  font-size: 32px;
+  color: #333; }
+
+.bfh-service .dropdown__select {
+  background: transparent;
+  padding: 0; }
+
+.bfh-service .dropdown__select label {
+  font-size: 24px; }
+
+.bfh-service .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #FFF transparent transparent transparent;
+  margin-left: 15px; }
+
+.bfh-service .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #FFF transparent; }
+
+.bfh-service .dropdown__label {
+  font-weight: 500;
+  font-size: 24px !important;
+  margin-bottom: 0; }
+
+.bfh-service .select2-container .select2-selection--single .select2-selection__rendered {
+  background: transparent;
+  border: none;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 24px !important;
+  padding-left: 0;
+  padding-right: 20px; }
+
+.bfh-service .select2-container--open .select2-dropdown {
+  /* left: calc(80% - 3px); */
+  border: 3px solid white;
+  xtext-align: center;
+  xbackground: transparent;
+  top: 0;
+  border-radius: 0; }
+
+.bfh-service .select2-results__option {
+  xtext-transform: capitalize;
+  xborder-bottom: none;
+  xcolor: #FFF !important; }
+
+.bfh-service .card__icons .card__vertical {
+  padding: 10px 0;
+  min-height: 270px; }
+
+.bfh-service .card__body-title h3 {
+  color: #333;
+  font-size: 32px;
+  margin: 10px auto; }
+
+.bfh-service .card__body-content p {
+  font-size: 14px; }
+
+.bfh-service .video-holder-wrap,
+.bfh-service .video-big .item {
+  padding-bottom: 56%; }
+
+.bfh-service .select2-results__options li:last-child {
+  border-bottom: none; }
+
+@media (min-width: 768px) {
+  .bfh-service .dropdown__select .select2-container {
+    padding-left: 137px !important;
+    margin-left: -137px !important;
+    padding-right: 38px !important;
+    margin-right: -38px !important;
+    z-index: 1000;
+    border: 3px solid #FFF;
+    padding-top: 10px;
+    padding-bottom: 10px; } }
+
+@media (max-width: 1024px) {
+  .bfh-service .select2-container--open .select2-dropdown {
+    background: #fff; }
+  .bfh-service .select2-container {
+    padding-left: 0 !important;
+    margin-left: 0px !important;
+    padding-right: 38px !important;
+    margin-right: -38px !important; } }
+
+@media (max-width: 767px) {
+  .bfh-service .dropdown__select label {
+    font-size: 24px; }
+  .bfh-service .dropdown__select .select2-container {
+    margin-right: 0 !important;
+    border: 3px solid #fff;
+    padding-left: 15px !important;
+    margin-top: 10px;
+    margin-left: 0 !important; }
+  .bfh-service .select2-container--open .select2-dropdown {
+    left: 0;
+    margin-left: 0 !important; } }
+
+@media (max-width: 767px) {
+  .bfh-service .banner .banner__header h1 {
+    margin: 0 auto !important; }
+  .bfh-service .dropdown__select {
+    width: 100%; }
+  .bfh-service .select2-results__option {
+    font-size: 18px; } }
+
+@media (max-width: 640px) {
+  .bfh-service .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: 60px; }
+  .bfh-service .select2-container--open .select2-dropdown {
+    left: 0px; }
+  .bfh-service .select2-container .select2-selection--single .select2-selection__rendered {
+    max-width: 250px;
+    position: relative;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; } }
+
+@media (max-width: 480px) {
+  .bfh-service .dropdown__select .select2-container,
+  .bfh-service .dropdown__select label {
+    display: inline-block;
+    max-width: unset; }
+  .bfh-service .select2-container .select2-selection--single .select2-selection__rendered,
+  .bfh-service .dropdown__label {
+    font-size: 18px !important; }
+  .bfh-service .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: 20px; }
+  .bfh-service .select2-container--open .select2-dropdown {
+    left: 0px; } }
+
+#bfhOnlineBanking .page__intro h2,
+#bfhPayLoans .page__intro h2 {
+  color: #008ad3; }
+
+#bfhPayBills .page__intro h2,
+#bfhDepositChecks .page__intro h2 {
+  color: #d67098; }
+
+#bfhReceiveCash .page__intro h2,
+#bfhCardlessWithdrawal .page__intro h2 {
+  color: #00a03f; }
+
+#bfhSendCash .page__intro h2 {
+  color: #ac5cb6; }
+
+#messageFromCeo .page__intro {
+  text-align: left; }
+
+#messageFromCeo .message__img {
+  margin-bottom: 30px; }
+  #messageFromCeo .message__img img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block; }
+
+#messageFromCeo .message__quote blockquote {
+  padding: 30px;
+  quotes: "“" "”" "‘" "’"; }
+  #messageFromCeo .message__quote blockquote::before {
+    content: open-quote;
+    color: #4091e4;
+    font-size: 100px;
+    display: block;
+    margin-bottom: -70px;
+    font-style: italic;
+    margin-left: -15px;
+    margin-top: -25px; }
+
+#messageFromCeo .message__quote p {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #444;
+  font-style: italic;
+  font-size: 20px; }
+
+#messageFromCeo .message__quote span {
+  display: block;
+  font-style: italic;
+  color: #444; }
+  #messageFromCeo .message__quote span.author {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500; }
+
+#messageFromCeo .message__content h5, #messageFromCeo .message__content h6 {
+  font-weight: bold; }
+
+#messageFromCeo .message__content h5 {
+  margin-bottom: 15px; }
+
+#messageFromCeo .message__content h6 {
+  margin-bottom: 5px;
+  font-size: 14px; }
+
+#messageFromCeo .message__content p {
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #222; }
+
+#serviceAnnouncements .page__intro h2 {
+  color: #3783d9; }
+
+#serviceAnnouncements .card__list {
+  background: rgba(213, 236, 247, 0.4);
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+#serviceAnnouncements .tab li {
+  margin-right: 0; }
+
+#serviceAnnouncements .tab a {
+  border: none;
+  padding: 10px 15px;
+  display: block;
+  color: #666;
+  font-weight: 500;
+  font-size: 20px; }
+
+#serviceAnnouncements .tab .active {
+  background: #FFF; }
+  #serviceAnnouncements .tab .active a {
+    color: #444;
+    font-weight: 600; }
+
+#serviceAnnouncements .tab__content, #serviceAnnouncements .tab__content .accordion-container {
+  padding: 0 !important; }
+
+#serviceAnnouncements .tab__content .accordion {
+  padding: 15px 30px 15px 20px;
+  background: rgba(213, 236, 247, 0.4);
+  color: #333 !important; }
+  #serviceAnnouncements .tab__content .accordion.is-expanded {
+    background: #FFF; }
+
+#serviceAnnouncements .tab__content .accordion.is-expanded + .accordion__content {
+  background: #FFF; }
+
+#serviceAnnouncements .tab__content .accordion__content {
+  padding: 30px;
+  margin-top: 5px; }
+  #serviceAnnouncements .tab__content .accordion__content h4 {
+    font-family: "Big Noodle Titling","Helvetica","sans-serif";
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 0.9;
+    color: #3783d9;
+    font-size: 28px; }
+  #serviceAnnouncements .tab__content .accordion__content h5 {
+    color: #3783d9;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px; }
+  #serviceAnnouncements .tab__content .accordion__content p {
+    font-size: 14px;
+    margin-bottom: 15px; }
+  #serviceAnnouncements .tab__content .accordion__content .button {
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 10px; }
+
+#serviceAnnouncements .tab__content .accordion.has-caret:before {
+  right: 20px; }
+
+#serviceAnnouncements .sa-item:not(:last-child) {
+  border-bottom: 1px solid #b2cfe4; }
+
+#serviceAnnouncements .sa-item:hover .accordion:not(.is-expanded) {
+  background: #d5ecf7; }
+
+.download-app {
+  padding-bottom: 100px; }
+  .download-app img {
+    max-width: 150px; }

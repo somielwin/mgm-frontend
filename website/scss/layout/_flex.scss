@@ -1,0 +1,219 @@
+
+/* FLEX */
+
+%flex{
+	& > ul{    
+		display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    // margin: 0 -8px;
+    // margin-bottom: 0;
+		& > li{
+			padding: 8px;
+			@media (max-width: 768px){
+				padding-right: 0 !important;
+				padding-left: 0 !important;
+			}
+			flex: 1 1 100%;
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+	&.less-margin{
+		@media (min-width: 1024px){
+			margin: 0 -8px;
+		}
+	}
+	&.no-wrap{
+		flex-wrap: nowrap;
+	}
+}
+
+// Add to container outside <ul>
+.flex{
+	&,
+	&--auto,
+	&--half,
+	&--third,
+	&--quarter,
+	&--fifths,
+	&--sixths,
+	&--eights{
+		@extend %flex;
+	}
+}
+
+.v {
+		
+	&--start {
+		align-items: flex-start !important;
+	}
+
+	&--center {
+		align-items: center !important;
+	}
+
+	&--stretch {
+		align-items: stretch !important;
+	}
+
+	&--end {
+		align-items: flex-end !important;
+	}
+}
+
+.h {
+
+	&--start {
+		justify-content: flex-start !important;
+	}
+
+	&--center {
+		justify-content: center !important;
+	}
+
+	&--end {
+		justify-content: flex-end !important;
+	}
+
+	&--space-between {
+		justify-content: space-between !important;
+	}
+
+	&--space-around {
+		justify-content: space-around !important;
+	}
+}
+
+@media (min-width: 769px){
+	.flex{
+		&--auto{
+			& > ul > li{
+				flex: 1 1 auto;
+			}
+		}
+		&--half{
+			& > ul > li{
+				-ms-flex: 0 1 50%;
+				flex: 0 1 50%;
+			}
+		}
+		&--third{
+			& > ul > li{
+				-ms-flex: 0 1 33.3333%;
+				flex: 0 1 33.3333%;
+				max-width: 33.3333%;
+				&.flex--two-third{
+					flex: 0 1 66.6666%;
+				}
+			}
+		}
+
+		&--quarter{
+			& > ul > li{
+				-ms-flex: 0 1 25%;
+				flex: 0 1 25%;
+				&.flex--three-fourth{
+					flex: 0 1 75%;
+				}
+			}
+		}
+
+		&--fifths{
+			& > ul > li{
+				-ms-flex: 0 1 20%;
+				flex: 0 1 20%;
+        &.flex--four-fifth{
+          flex: 0 1 80%;
+        }
+        &.flex--three-fifth{
+          flex: 0 1 60%;
+        }
+        &.flex--two-fifth{
+          flex: 0 1 40%;
+        }
+			}
+		}
+		&--sixths{
+			& > ul > li{
+				-ms-flex: 0 1 16.6666%;
+				flex: 0 1 16.6666%;
+			}
+		}
+
+		&--eights{
+			& > ul > li{
+				-ms-flex: 0 1 12.5%;
+				flex: 0 1 12.5%;
+			}
+		}
+	}
+  _:-ms-fullscreen, 
+  :root .flex--half > ul > li {
+		flex: 0 1 48.60%;
+  }
+  _:-ms-fullscreen, 
+  :root .flex--half > ul > li.dv__image {
+		flex: 0 1 48%;
+  }
+  _:-ms-fullscreen, 
+  :root .flex--half > ul > li.dv__details {
+		flex: 0 1 48%;
+  }
+
+  _:-ms-fullscreen, 
+  :root #personalBankingExplore .flex--half > ul > li {
+		flex: 0 1 49.25%;
+  }
+
+  _:-ms-fullscreen, 
+  :root .call-form .flex--half > ul > li {
+		flex: 0 1 47.75%;
+  }
+
+  _:-ms-fullscreen, 
+  :root .search-form .flex--half > ul > li {
+		flex: 1 1 48.10%;
+  }
+  _:-ms-fullscreen, 
+  :root .search-result > li {
+		flex: 0 1 23%;
+  }
+
+  _:-ms-fullscreen, 
+  :root #episo .flex--half > ul > li {
+		flex: 0 1 47.60%;
+  }
+
+  _:-ms-fullscreen, 
+  :root #autoLoans .form--outline-blue .flex--half > ul > li {
+		flex: 0 1 45.50%;
+  }
+
+  _:-ms-fullscreen, 
+  :root .flex--third > ul > li {
+		flex: 0 1 30%;
+  }
+  _:-ms-fullscreen, 
+  :root .flex--third > ul.swiper-wrapper > li {
+		flex: 0 1 auto;
+  }
+  _:-ms-fullscreen, 
+  :root .flex--fifths > ul > li.flex--four-fifth {
+		flex: 0 1 76.25%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+	.flex--fifths>ul>li.flex--four-fifth {
+    flex: 0 0 70%;
+	}
+}
+
+// Reset
+.no-flex{
+	display: inline-block !important;
+}
